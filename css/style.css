@@ -5,7 +5,7 @@ body {
   background: #0b0b0b;
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
-  scroll-behavior: smooth; /* Smooth scroll */
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
@@ -38,13 +38,16 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../assets/img/hero.jpg');
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+              url('../assets/img/hero.jpg'); /* check path matches your folder */
   background-size: cover;
   background-position: center;
+  color: #ffffff;
 }
 .hero h1 {
   font-size: 3.5rem;
   font-weight: 700;
+  margin: 0;
 }
 .hero p {
   font-size: 1.2rem;
@@ -68,6 +71,8 @@ body {
   border: none;
   color: #fff;
   transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 20px;
 }
 .card:hover {
   transform: translateY(-10px);
@@ -86,6 +91,9 @@ footer {
 footer a {
   color: #0d6efd;
   text-decoration: none;
+}
+footer a:hover {
+  color: #ffffff;
 }
 
 /* ======================== */
@@ -110,6 +118,7 @@ a:hover {
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  margin-bottom: 20px;
 }
 .skill-card:hover {
   transform: translateY(-5px);
@@ -130,6 +139,12 @@ a:hover {
 }
 
 /* ======================== */
+/* JS + Hover Interaction */
+.skill-card:hover .skill-detail {
+  display: block;
+}
+
+/* ======================== */
 /* Responsive spacing */
 /* ======================== */
 @media (max-width: 768px) {
@@ -146,4 +161,20 @@ a:hover {
   .skill-detail {
     font-size: 0.9rem;
   }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+/* ======================== */
+/* Optional: Smooth hover for hero text */
+.hero h1, .hero p {
+  transition: all 0.3s ease;
+}
+.hero:hover h1 {
+  transform: scale(1.05);
+}
+.hero:hover p {
+  transform: scale(1.02);
 }
