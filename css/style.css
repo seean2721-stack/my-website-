@@ -1,0 +1,149 @@
+/* ======================== */
+/* General Body */
+/* ======================== */
+body {
+  background: #0b0b0b;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth; /* Smooth scroll */
+  margin: 0;
+  padding: 0;
+}
+
+/* ======================== */
+/* Navbar */
+/* ======================== */
+.navbar {
+  background: transparent !important;
+  padding: 1rem 2rem;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  margin-left: 1rem;
+}
+.navbar-nav .nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* ======================== */
+/* Hero Section */
+/* ======================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../assets/img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+/* ======================== */
+/* Section Titles */
+/* ======================== */
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ======================== */
+/* Cards */
+/* ======================== */
+.card {
+  background: #141414;
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 20px rgba(13,110,253,.5);
+}
+
+/* ======================== */
+/* Footer */
+/* ======================== */
+footer {
+  background: #000;
+  padding: 30px 0;
+  text-align: center;
+  color: #777;
+}
+footer a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+/* ======================== */
+/* Links Hover */
+/* ======================== */
+a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ======================== */
+/* Skills Section */
+/* ======================== */
+.skill-card {
+  background: #141414;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(13, 110, 253, 0.5);
+}
+.skill-card h4 {
+  margin-bottom: 10px;
+}
+.skill-detail {
+  display: none; /* Hide detail initially */
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.skill-card.active .skill-detail {
+  display: block; /* Show detail when active */
+}
+
+/* ======================== */
+/* Responsive spacing */
+/* ======================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+  .skill-detail {
+    font-size: 0.9rem;
+  }
+}
